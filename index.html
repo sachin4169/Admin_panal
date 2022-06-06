@@ -1,0 +1,141 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!----===== Ajax ===== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Admin-Panal</title>
+    <!-- Main Css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="slider close">
+      <header>
+        <div class="header_text">
+          <p class="name">CedCommerce</p>
+          <p class="profation">Web developer</p>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="navbar">
+        <div class="menu">
+          <li class="search_box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
+          <ul class="nav_menu">
+            <li class="nav_link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav_link">
+              <a href="#">
+                <i class="bx bx-envelope icon"></i>
+                <span class="text nav-text">Email</span>
+              </a>
+            </li>
+            <li class="nav_link">
+              <a href="#">
+                <i class="bx bx-calendar icon"></i>
+                <span class="text nav-text">Calendar</span>
+              </a>
+            </li>
+            <li class="nav_link">
+              <a href="#">
+                <i class="bx bx-user icon"></i>
+                <span class="text nav-text">User</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom_menu">
+          <li class="nav_link">
+            <a href="#">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Log Out</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="sun_moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode_text text">Dark mode</span>
+
+            <div class="toggle_switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <h1 class="text">Dashboard - Admin-Panal</h1>
+       <!-- login section -->
+       <div class="login_section">
+        <div class="form_section">
+            <h2 class="h2">Login with Email</h2>
+              <form action="" class="form">
+                  <div class="row">
+                      <div class="col">
+                        <input type="email" class="" placeholder="Email*">  
+                      </div>
+                      <div class="col">
+                           <input type="password" placeholder="Password*">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <textarea name="" id="" placeholder="Address"></textarea> 
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col"> 
+                         <button type="submit" class="login_btn">LOGIN</button> 
+                      </div>
+                  </div> 
+              </form>
+        </div>
+      
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var body = $("body");
+
+        $(".toggle").click(function () {
+          $(".slider").toggleClass("close");
+        });
+
+        $(".search_box").click(function () {
+          $(".slider").removeClass("close");
+        });
+
+        $(".toggle_switch").click(function () {
+          $("body").toggleClass("dark");
+          if (body.hasClass("dark")) {
+            $(".mode_text").html("Light Mode");
+          } else {
+            $(".mode_text").html("Dark Mode");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
